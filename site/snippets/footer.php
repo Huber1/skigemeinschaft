@@ -1,51 +1,31 @@
 <?php
-/*
-  Snippets are a great way to store code snippets for reuse
-  or to keep your templates clean.
+/**
+ * @var Site $site
+ */
 
-  This footer snippet is reused in all templates.
+use Kirby\Panel\Site;
 
-  More about snippets:
-  https://getkirby.com/docs/guide/templates/snippets
-*/
 ?>
-  </main>
-
-  <footer class="footer">
-    <div class="grid">
-      <div class="column" style="--columns: 8">
-        <h2><a href="https://getkirby.com">Made with Kirby</a></h2>
-        <p>
-          Kirby: the file-based CMS that adapts to any project, loved by developers and editors alike
-        </p>
-      </div>
-      <div class="column" style="--columns: 2">
-        <h2>Pages</h2>
-        <ul>
-          <?php foreach ($site->children()->listed() as $example): ?>
-          <li><a href="<?= $example->url() ?>"><?= $example->title()->esc() ?></a></li>
-          <?php endforeach ?>
-        </ul>
-      </div>
-      <div class="column" style="--columns: 2">
-        <h2>Kirby</h2>
-        <ul>
-          <li><a href="https://getkirby.com">Website</a></li>
-          <li><a href="https://getkirby.com/docs">Docs</a></li>
-          <li><a href="https://forum.getkirby.com">Forum</a></li>
-          <li><a href="https://chat.getkirby.com">Chat</a></li>
-          <li><a href="https://github.com/getkirby">GitHub</a></li>
-        </ul>
-      </div>
+</main>
+<footer class="bg-primary py-4 text-white text-sm">
+  <div class="max-w-7xl m-auto px-4 flex flex-col items-center">
+    <div class="text-center">
+      <?= $site->footertext() ?>
     </div>
-  </footer>
+    <!-- Partner -->
+    <div class="py-4">PARTNER</div>
+    <div>
+      <a href="#">Teilnahmebedingungen</a> /
+      <a href="#">Datenschutzerklärung</a> /
+      <a href="#">Impressum</a>
+    </div>
+  </div>
+</footer>
 
-  <?= js([
-    'assets/js/prism.js',
-    'assets/js/lightbox.js',
-    'assets/js/index.js',
-    '@auto'
-  ]) ?>
+<?= js([
+  'assets/js/index.js',
+  '@auto'
+]) ?>
 
 </body>
 </html>

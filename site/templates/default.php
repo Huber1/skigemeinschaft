@@ -1,30 +1,29 @@
 <?php
-/*
-  Templates render the content of your pages.
 
-  They contain the markup together with some control structures
-  like loops or if-statements. The `$page` variable always
-  refers to the currently active page.
+use Kirby\Panel\Page;
 
-  To fetch the content from each field we call the field name as a
-  method on the `$page` object, e.g. `$page->title()`.
+/**
+ * @var Page $page
+ */
 
-  This default template must not be removed. It is used whenever Kirby
-  cannot find a template with the name of the content file.
-
-  Snippets like the header and footer contain markup used in
-  multiple templates. They also help to keep templates clean.
-
-  More about templates: https://getkirby.com/docs/guide/templates/basics
-*/
 ?>
 <?php snippet('header') ?>
 
-<article>
-  <h1 class="h1"><?= $page->title()->esc() ?></h1>
-  <div class="text">
-    <?= $page->text()->kt() ?>
-  </div>
-</article>
+<div class="py-6">
+  <h1 class="text-center text-3xl"><?= $page->title()->esc() ?></h1>
+</div>
+
+<!-- Content -->
+<?php foreach ($page->layout()->toLayouts() as $layout): ?>
+  <section class="mt-8 grid grid-cols-12 gap-12">
+    <?php foreach ($layout->columns() as $column): ?>
+      <div style="grid-column: span <?= $column->span() ?>">
+        <div class="prose">
+          <?= $column->blocks() ?>
+        </div>
+      </div>
+    <?php endforeach ?>
+  </section>
+<?php endforeach ?>
 
 <?php snippet('footer') ?>

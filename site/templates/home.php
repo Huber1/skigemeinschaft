@@ -1,61 +1,42 @@
 <?php
-/*
-  Templates render the content of your pages.
 
-  They contain the markup together with some control structures
-  like loops or if-statements. The `$page` variable always
-  refers to the currently active page.
+use Kirby\Cms\Page;
 
-  To fetch the content from each field we call the field name as a
-  method on the `$page` object, e.g. `$page->title()`.
-
-  This home template renders content from others pages, the children of
-  the `photography` page to display a nice gallery grid.
-
-  Snippets like the header and footer contain markup used in
-  multiple templates. They also help to keep templates clean.
-
-  More about templates: https://getkirby.com/docs/guide/templates/basics
-*/
+/**
+ * @var Page $page
+ */
 
 ?>
 <?php snippet('header') ?>
-  <?php snippet('intro') ?>
-  <?php
-  /*
-    We always use an if-statement to check if a page exists to
-    prevent errors in case the page was deleted or renamed before
-    we call a method like `children()` in this case
-  */
-  ?>
-  <?php if ($photographyPage = page('photography')): ?>
-  <ul class="home-grid">
-    <?php foreach ($photographyPage->children()->listed() as $album): ?>
-    <li>
-      <a href="<?= $album->url() ?>">
-        <figure>
-          <?php
-          /*
-            The `cover()` method defined in the `album.php`
-            page model can be used everywhere across the site
-            for this type of page
 
-            We can automatically resize images to a useful
-            size with Kirby's built-in image manipulation API
-          */
-          ?>
-          <?php if ($cover = $album->cover()): ?>
-          <img src="<?= $cover->resize(1024, 1024)->url() ?>" alt="<?= $cover->alt()->esc() ?>">
-          <?php endif ?>
-          <figcaption>
-            <span>
-              <span class="example-name"><?= $album->title()->esc() ?></span>
-            </span>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
+
+<!-- Hero section -->
+<div
+  class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-center"
+  style="background-image: url('<?= $page->content()->background()->toFile()->url() ?>')">
+
+  <img
+    src="<?= asset('assets/images/logo.svg')->url() ?>"
+    alt=""
+    class="h-64">
+
+  <div class="flex gap-4">
+    <a href="#" class="block bg-salmon px-4 py-2">Angebote</a>
+    <a href="#" class="block bg-salmon px-4 py-2">Mitglied werden</a>
+  </div>
+</div>
+
+<!-- Content -->
+<?php foreach ($page->layout()->toLayouts() as $layout): ?>
+  <section class="mt-8 grid grid-cols-12 gap-12">
+    <?php foreach ($layout->columns() as $column): ?>
+      <div class="mb-12" style="grid-column: span <?= $column->span() ?>">
+        <div class="prose">
+          <?= $column->blocks() ?>
+        </div>
+      </div>
     <?php endforeach ?>
-  </ul>
-  <?php endif ?>
+  </section>
+<?php endforeach ?>
+
 <?php snippet('footer') ?>

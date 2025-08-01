@@ -2,6 +2,14 @@ Title: Home
 
 ----
 
+Background: - 'file://qoxojlm8qrbnleqb'
+
+----
+
+Layout: 
+
+----
+
 Headline: Welcome to Kirby's Starterkit
 
 ----

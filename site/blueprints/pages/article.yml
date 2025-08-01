@@ -1,20 +1,19 @@
 # Each page blueprint must have a title, the title may be different from the file name
 # This default blueprint is used to display a page in the Panel whenever a custom page blueprint is missing.
-title: Simple Page
-
-# Each page can have an icon that is shown in page listings when no preview image is available.
-icon: 📝
+title: Default Page
 
 # Custom descriptions of page statuses depending on use case
 # More about page statuses: https://getkirby.com/docs/reference/panel/blueprints/page#statuses
 status:
-  draft: true
+  draft:
+    label: Draft
+    text: The article is still in draft mode. It can only be seen by editors with panel access.
   unlisted:
     label: Hidden Page
     text: The page is not listed in the main menu
   listed:
-    label: Menu Page
-    text: The page is listed in the main menu
+    label: Published
+    text: The note is online and listed in the blog
 
 # Content area width 2 columns and 3 sections: fields, pages, and files
 # Columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns

@@ -1,18 +1,5 @@
-<?php
-/*
-  Snippets are a great way to store code snippets for reuse
-  or to keep your templates clean.
-
-  This header snippet is reused in all templates.
-  It fetches information from the `site.txt` content file
-  and contains the site navigation.
-
-  More about snippets:
-  https://getkirby.com/docs/guide/templates/snippets
-*/
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 
   <meta charset="utf-8">
@@ -34,9 +21,7 @@
   */
   ?>
   <?= css([
-    'assets/css/prism.css',
-    'assets/css/lightbox.css',
-    'assets/css/index.css',
+    'assets/css/styles.css',
     '@auto'
   ]) ?>
 
@@ -51,37 +36,37 @@
 </head>
 <body>
 
-  <header class="header">
+<header class="max-w-7xl m-auto py-2 md:py-0 px-4 flex flex-col md:flex-row justify-between items-center">
+  <a class="block px-2 py-4" href="<?= $site->url() ?>">
+    <img
+      src="<?= asset('assets/images/logo.svg')->url() ?>"
+      alt=""
+      class="w-16">
+  </a>
+
+  <nav>
     <?php
     /*
-      We use `$site->url()` to create a link back to the homepage
-      for the logo and `$site->title()` as a temporary logo. You
-      probably want to replace this with an SVG.
+      In the menu, we only fetch listed pages,
+      i.e. the pages that have a prepended number
+      in their foldername.
+
+      We do not want to display links to unlisted
+      `error`, `home`, or `sandbox` pages.
+
+      More about page status:
+      https://getkirby.com/docs/reference/panel/blueprints/page#statuses
     */
     ?>
-    <a class="logo" href="<?= $site->url() ?>">
-      <?= $site->title()->esc() ?>
-    </a>
+    <?php foreach ($site->children()->listed() as $item): ?>
+      <a
+        <?php e($item->isOpen(), 'aria-current="page"') ?>
+        href="<?= $item->url() ?>"
+        class="block px-2 py-4 float-left">
+        <?= $item->title()->esc() ?>
+      </a>
+    <?php endforeach ?>
+  </nav>
+</header>
 
-    <nav class="menu">
-      <?php
-      /*
-        In the menu, we only fetch listed pages,
-        i.e. the pages that have a prepended number
-        in their foldername.
-
-        We do not want to display links to unlisted
-        `error`, `home`, or `sandbox` pages.
-
-        More about page status:
-        https://getkirby.com/docs/reference/panel/blueprints/page#statuses
-      */
-      ?>
-      <?php foreach ($site->children()->listed() as $item): ?>
-      <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><?= $item->title()->esc() ?></a>
-      <?php endforeach ?>
-      <?php snippet('social') ?>
-    </nav>
-  </header>
-
-  <main class="main">
+<main role="main" class="max-w-7xl m-auto">

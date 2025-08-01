@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'getkirby/starterkit',
-        'pretty_version' => '5.0.3',
-        'version' => '5.0.3.0',
-        'reference' => null,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'ffbf90c63a584c1eb4e0b4905aecf03c8ad95e1d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -65,9 +65,9 @@
             'dev_requirement' => false,
         ),
         'getkirby/starterkit' => array(
-            'pretty_version' => '5.0.3',
-            'version' => '5.0.3.0',
-            'reference' => null,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'ffbf90c63a584c1eb4e0b4905aecf03c8ad95e1d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
