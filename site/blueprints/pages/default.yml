@@ -1,0 +1,23 @@
+title: Standardseite
+
+status:
+  draft: true
+  unlisted:
+    label: Versteckte Seite
+    text: Die Seite taucht nicht in der Hauptnavigation auf
+  listed:
+    label: Menüseite
+    text: Die Seite hat einen Eintrag in der Hauptnavigation
+
+sections:
+  content:
+    type: fields
+    fields:
+      layout:
+        label: Inhalt
+        type: layout
+        layouts:
+          - "1/1"
+          - "1/2, 1/2"
+          - "1/3, 2/3"
+          - "2/3, 1/3"
