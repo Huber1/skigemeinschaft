@@ -1,0 +1,6 @@
+title: Angebote
+
+sections:
+  angebote:
+    extends: sections/angebote
+    label: Angebote

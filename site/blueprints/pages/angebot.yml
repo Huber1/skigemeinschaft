@@ -1,0 +1,42 @@
+title: Angebot
+
+status:
+  draft:
+    label: Versteckt
+  listed:
+    label: Öffentlich
+
+columns:
+  - width: 2/3
+    fields:
+      text:
+        label: Beschreibung
+        type: textarea
+        autofocus: true
+
+  - width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          #cover:
+          startDate:
+            type: date
+            display: DD.MM.YYYY
+            label: Startdatum für Sortierung
+          termin:
+            type: text
+            label: Termin
+          abfahrt:
+            type: writer
+            label: Abfahrt
+          ankunft:
+            type: writer
+            label: Ankunft
+          kosten:
+            type: text
+            label: Kosten
+          anmeldeschluss:
+            type: date
+            display: DD.MM.YYYY
+            label: Anmeldeschluss

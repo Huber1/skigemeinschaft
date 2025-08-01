@@ -5,17 +5,16 @@
 # More about the site blueprint: https://getkirby.com/docs/reference/panel/blueprints/site
 
 # The layout of this form has two columns
-title: Site
-
 columns:
   main:
-    width: 2/3
+    width: 1/2
+    sections:
+      angebote: sections/angebote
+  sidebar:
+    width: 1/2
     sections:
       pages:
         type: pages
-  sidebar:
-    width: 1/3
-    sections:
       footer:
         type: fields
         fields:
