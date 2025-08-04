@@ -13,7 +13,10 @@ use Kirby\Cms\Page;
 <!-- Hero section -->
 <div
   class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-center"
-  style="background-image: url('<?= $page->content()->background()->toFile()->url() ?>')">
+  <?php if ($page->content()->background()->toFile() !== null): ?>
+    style="background-image: url('<?= $page->content()->background()->toFile()->url() ?>')"
+  <?php endif; ?>
+>
 
   <img
     src="<?= asset('assets/images/logo.svg')->url() ?>"

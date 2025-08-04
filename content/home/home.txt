@@ -2,11 +2,11 @@ Title: Home
 
 ----
 
-Background: - 'file://qoxojlm8qrbnleqb'
+Background: - 'file://12P5clBKKwIspEz1'
 
 ----
 
-Layout: 
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"level":"h2","text":"Headline"},"id":"a3504c3e-c6d6-453d-8d7e-ba67436b43db","isHidden":false,"type":"heading"}],"id":"0bbac718-0fac-47ad-8953-0cfd8f483a1b","width":"1/1"}],"id":"25e30179-e2c1-4cd4-9250-0eaa5fa31d3d"},{"attrs":[],"columns":[{"blocks":[{"content":{"text":"<p>With content</p>"},"id":"a76f6760-c71b-41d4-9f82-8fed7e416f11","isHidden":false,"type":"text"}],"id":"10aa4e8a-c7b7-4d13-941e-86e95caf3377","width":"1/1"}],"id":"50da2514-ca26-43aa-9523-8d2d9516618d"},{"attrs":[],"columns":[{"blocks":[{"content":{"code":"Some Code block","language":"text"},"id":"e8f21160-3dc3-4d57-b4b3-7719df5fbe42","isHidden":false,"type":"code"}],"id":"1a68a41e-16a7-48e0-850a-7dfe9e25eb3c","width":"1/1"}],"id":"9475f819-a79a-4148-9c88-9cea218b880d"}]
 
 ----
 

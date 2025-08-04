@@ -1,7 +1,33 @@
 @import "tailwindcss";
+
 @plugin "@tailwindcss/typography";
 
 @theme {
+  --color-primary-50: #e7fffc;
+  --color-primary-100: #c2fff7;
+  --color-primary-200: #8cfff0;
+  --color-primary-300: #3dffe5;
+  --color-primary-400: #00ffde;
+  --color-primary-500: #00fffc;
+  --color-primary-600: #00cde3;
+  --color-primary-700: #00a1b5;
+  --color-primary-800: #007f90;
+  --color-primary-900: #006e80; /* Primary */
+  --color-primary-950: #004555;
+
+  --color-salmon-50: #fef2f3;
+  --color-salmon-100: #fde6e8;
+  --color-salmon-200: #fbd0d5;
+  --color-salmon-300: #f7aab3;
+  --color-salmon-400: #f17b8a;
+  --color-salmon-500: #e85269; /* Secondary, salmon */
+  --color-salmon-600: #d32b4d;
+  --color-salmon-700: #b21e3f;
+  --color-salmon-800: #951c3b;
+  --color-salmon-900: #801b38;
+  --color-salmon-950: #470a1a;
+
+  /* Colors are generated from this: */
   --color-primary: #006e80;
   --color-salmon: #e85269;
 }
