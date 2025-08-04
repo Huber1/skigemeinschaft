@@ -24,8 +24,8 @@ use Kirby\Cms\Page;
     class="h-64">
 
   <div class="flex gap-4">
-    <a href="#" class="block bg-salmon px-4 py-2">Angebote</a>
-    <a href="#" class="block bg-salmon px-4 py-2">Mitglied werden</a>
+    <a href="<?= $page->content()->angebote_url()->toUrl() ?>" class="block bg-salmon px-4 py-2">Angebote</a>
+    <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>" class="block bg-salmon px-4 py-2">Mitglied werden</a>
   </div>
 </div>
 

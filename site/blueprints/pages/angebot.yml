@@ -19,7 +19,7 @@ columns:
       meta:
         type: fields
         fields:
-          #cover:
+          cover: fields/cover
           startDate:
             type: date
             display: DD.MM.YYYY
