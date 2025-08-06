@@ -36,9 +36,11 @@ use Kirby\Cms\Page;
     </div>
   </div>
   <div>
-    <img
-      src="<?= $page->content()->cover()->toFile()->url() ?>"
-      class="rounded-lg">
+    <?php if ($page->content()->cover()->toFile() != null): ?>
+      <img
+        src="<?= $page->content()->cover()->toFile()->url() ?>"
+        class="rounded-lg">
+    <?php endif ?>
   </div>
 </div>
 
