@@ -31,3 +31,10 @@
   --color-primary: #006e80;
   --color-salmon: #e85269;
 }
+
+@layer components {
+  /* Not the best way, but the spacing is just too much */
+  .prose li p {
+    margin: 0 !important;
+  }
+}

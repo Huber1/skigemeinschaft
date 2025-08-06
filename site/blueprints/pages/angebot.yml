@@ -13,6 +13,16 @@ columns:
         label: Beschreibung
         type: textarea
         autofocus: true
+      eigenschaften:
+        label: Eigenschaften
+        type: structure
+        fields:
+          name:
+            label: Name
+            type: text
+          value:
+            label: Wert
+            type: writer
 
   - width: 1/3
     sections:
@@ -24,19 +34,11 @@ columns:
             type: date
             display: DD.MM.YYYY
             label: Startdatum für Sortierung
-          termin:
-            type: text
-            label: Termin
-          abfahrt:
-            type: writer
-            label: Abfahrt
-          ankunft:
-            type: writer
-            label: Ankunft
-          kosten:
-            type: text
-            label: Kosten
           anmeldeschluss:
             type: date
             display: DD.MM.YYYY
             label: Anmeldeschluss
+          widget:
+            label: Yolawo Widget URL
+            type: url
+            placeholder: https://widgets.yolawo.de/w/...

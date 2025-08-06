@@ -4,3 +4,4 @@ sections:
   angebote:
     extends: sections/angebote
     label: Angebote
+

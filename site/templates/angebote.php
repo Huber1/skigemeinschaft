@@ -14,11 +14,12 @@ use Kirby\Cms\Page;
 </div>
 
 <!-- Angebote Cards -->
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
   <?php foreach ($page->children() as $child): ?>
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
-      <div class="bg-salmon-50 flex p-2">
-        <div>IMAGE</div>
+      <div class="bg-salmon-50 flex p-2 gap-4 rounded-2xl">
+        <img src="<?= $child->cover()->toFile()->url() ?>"
+             class="w-48 object-cover rounded-lg">
         <div class="flex flex-col gap-4">
           <h2 class="text-xl font-medium group-hover:text-salmon">
             <?= $child->title() ?>

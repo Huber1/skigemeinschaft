@@ -69,4 +69,4 @@
   </nav>
 </header>
 
-<main role="main" class="max-w-7xl m-auto">
+<main role="main" class="max-w-7xl m-auto pb-16 px-8">
