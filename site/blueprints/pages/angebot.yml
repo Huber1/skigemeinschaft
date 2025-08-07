@@ -29,7 +29,9 @@ columns:
       meta:
         type: fields
         fields:
-          cover: fields/cover
+          cover:
+            extends: fields/cover
+            required: true
           startDate:
             type: date
             display: DD.MM.YYYY

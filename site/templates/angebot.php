@@ -39,10 +39,12 @@ use Kirby\Cms\Page;
             <td class="prose pb-4"><?= $item->value() ?></td>
           </tr>
         <?php endforeach ?>
-        <tr>
-          <td class="font-bold pr-4">Anmeldeschluss:</td>
-          <td class="prose"><?= $page->content()->anmeldeschluss()->toDate('d.m.Y') ?></td>
-        </tr>
+        <?php if ($page->content()->anmeldeschluss() != null): ?>
+          <tr>
+            <td class="font-bold pr-4">Anmeldeschluss:</td>
+            <td class="prose"><?= $page->content()->anmeldeschluss()->toDate('d.m.Y') ?></td>
+          </tr>
+        <?php endif ?>
       </table>
     </div>
   </div>

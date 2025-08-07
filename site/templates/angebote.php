@@ -18,7 +18,10 @@ use Kirby\Cms\Page;
   <?php foreach ($page->children() as $child): ?>
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
       <div class="p-2 flex gap-4 items-stretch bg-salmon-50  rounded-2xl">
-        <div class="flex-2/5 bg-cover rounded-lg" style="background-image: url('<?= $child->cover()->toFile()->url() ?>')"></div>
+        <div
+          class="flex-2/5 bg-cover rounded-lg"
+          style="background-image: url('<?= $child->cover()->toFile()->url() ?>')">
+        </div>
         <div class="flex-3/5 flex flex-col gap-4">
           <h2 class="text-xl font-medium group-hover:text-salmon">
             <?= $child->title() ?>
