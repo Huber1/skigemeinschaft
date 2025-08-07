@@ -49,7 +49,7 @@
     <img
       src="<?= asset('assets/images/logo.svg')->url() ?>"
       alt=""
-      class="w-16">
+      class="h-16">
   </a>
 
   <nav>
