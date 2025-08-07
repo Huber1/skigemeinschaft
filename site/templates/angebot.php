@@ -13,6 +13,13 @@ use Kirby\Cms\Page;
   <h1 class="text-center text-3xl"><?= $page->title()->esc() ?></h1>
 </div>
 
+<div class="mb-4 flex items-center text-salmon font-medium">
+  <svg xmlns="http://www.w3.org/2000/svg" class="-ml-2 size-6" viewBox="0 0 24 24" fill="currentColor">
+    <path
+      d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
+  </svg>
+  <a href="<?= $page->parent()->url() ?>">Zurück zur Übersicht</a>
+</div>
 
 <!-- Content -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -22,6 +29,10 @@ use Kirby\Cms\Page;
     </div>
     <div class="mt-4">
       <table>
+        <tr>
+          <td class="font-bold align-top pr-4">Termin</td>
+          <td class="prose pb-4"><?= $page->termin() ?></td>
+        </tr>
         <?php foreach ($page->eigenschaften()->toStructure() as $item): ?>
           <tr>
             <td class="font-bold align-top pr-4"><?= $item->name() ?></td>
@@ -30,7 +41,7 @@ use Kirby\Cms\Page;
         <?php endforeach ?>
         <tr>
           <td class="font-bold pr-4">Anmeldeschluss:</td>
-          <td><?= $page->content()->anmeldeschluss()->toDate('d.m.Y') ?></td>
+          <td class="prose"><?= $page->content()->anmeldeschluss()->toDate('d.m.Y') ?></td>
         </tr>
       </table>
     </div>

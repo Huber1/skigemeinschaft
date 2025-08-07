@@ -34,6 +34,9 @@ columns:
             type: date
             display: DD.MM.YYYY
             label: Startdatum für Sortierung
+          termin:
+            type: text
+            label: Termin
           anmeldeschluss:
             type: date
             display: DD.MM.YYYY

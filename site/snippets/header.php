@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @var \Kirby\Cms\Site $site
+ * @var \Kirby\Cms\Page $page
+ */
+
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
