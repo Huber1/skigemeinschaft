@@ -33,6 +33,10 @@
 }
 
 @layer components {
+  a {
+    @apply text-salmon;
+  }
+
   /* Not the best way, but the spacing is just too much */
   .prose li p {
     margin: 0 !important;

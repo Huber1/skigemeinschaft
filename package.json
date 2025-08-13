@@ -4,6 +4,7 @@
   "description": "Website of Skigemeinschaft Forstenried-Gauting e.V",
   "author": "Moritz Huber",
   "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./assets/css/index.css -o ./assets/css/styles.css --content './site/**/*.php' -w",
     "watch": "npx @tailwindcss/cli -i ./assets/css/index.css -o ./assets/css/styles.css --content './site/**/*.php' -w",
     "build": "npx @tailwindcss/cli -i ./assets/css/index.css -o ./assets/css/styles.css --content './site/**/*.php' -m"
   },
