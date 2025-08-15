@@ -44,37 +44,39 @@
 </head>
 <body>
 
-<header class="max-w-7xl m-auto py-2 md:py-0 px-4 flex flex-col md:flex-row justify-between items-center">
-  <a class="block px-2 py-4" href="<?= $site->url() ?>">
-    <img
-      src="<?= asset('assets/images/logo.svg')->url() ?>"
-      alt=""
-      class="h-16">
-  </a>
+<div class="px-8">
+  <header class="max-w-7xl m-auto py-2 md:py-0 flex flex-col md:flex-row justify-between items-center">
+    <a class="block px-2 py-4" href="<?= $site->url() ?>">
+      <img
+        src="<?= asset('assets/images/logo.svg')->url() ?>"
+        alt=""
+        class="h-16">
+    </a>
 
-  <nav>
-    <?php
-    /*
-      In the menu, we only fetch listed pages,
-      i.e. the pages that have a prepended number
-      in their foldername.
+    <nav>
+      <?php
+      /*
+        In the menu, we only fetch listed pages,
+        i.e. the pages that have a prepended number
+        in their foldername.
 
-      We do not want to display links to unlisted
-      `error`, `home`, or `sandbox` pages.
+        We do not want to display links to unlisted
+        `error`, `home`, or `sandbox` pages.
 
-      More about page status:
-      https://getkirby.com/docs/reference/panel/blueprints/page#statuses
-    */
-    ?>
-    <?php foreach ($site->children()->listed() as $item): ?>
-      <a
-        <?php e($item->isOpen(), 'aria-current="page"') ?>
-        href="<?= $item->url() ?>"
-        class="block px-2 py-4 float-left">
-        <?= $item->title()->esc() ?>
-      </a>
-    <?php endforeach ?>
-  </nav>
-</header>
+        More about page status:
+        https://getkirby.com/docs/reference/panel/blueprints/page#statuses
+      */
+      ?>
+      <?php foreach ($site->children()->listed() as $item): ?>
+        <a
+          <?php e($item->isOpen(), 'aria-current="page"') ?>
+          href="<?= $item->url() ?>"
+          class="block px-2 py-4 float-left text-inherit">
+          <?= $item->title()->esc() ?>
+        </a>
+      <?php endforeach ?>
+    </nav>
+  </header>
+</div>
 
-<main role="main" class="max-w-7xl m-auto pb-16 px-8">
+<main role="main" class="max-w-7xl m-auto pb-16">

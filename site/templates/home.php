@@ -24,22 +24,25 @@ use Kirby\Cms\Page;
     class="h-64">
 
   <div class="flex gap-4">
-    <a href="<?= $page->content()->angebote_url()->toUrl() ?>" class="block bg-salmon px-4 py-2">Angebote</a>
-    <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>" class="block bg-salmon px-4 py-2">Mitglied werden</a>
+    <a href="<?= $page->content()->angebote_url()->toUrl() ?>" class="block px-4 py-2 bg-salmon text-inherit">Angebote</a>
+    <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>" class="block px-4 py-2 bg-salmon text-inherit">Mitglied
+      werden</a>
   </div>
 </div>
 
-<!-- Content -->
-<?php foreach ($page->layout()->toLayouts() as $layout): ?>
-  <section class="mt-8 grid grid-cols-12 gap-12">
-    <?php foreach ($layout->columns() as $column): ?>
-      <div class="mb-12" style="grid-column: span <?= $column->span() ?>">
-        <div class="prose">
-          <?= $column->blocks() ?>
+<div class="px-8">
+  <!-- Content -->
+  <?php foreach ($page->layout()->toLayouts() as $layout): ?>
+    <section class="mt-8 grid grid-cols-12 gap-12">
+      <?php foreach ($layout->columns() as $column): ?>
+        <div class="mb-12" style="grid-column: span <?= $column->span() ?>">
+          <div class="prose">
+            <?= $column->blocks() ?>
+          </div>
         </div>
-      </div>
-    <?php endforeach ?>
-  </section>
-<?php endforeach ?>
+      <?php endforeach ?>
+    </section>
+  <?php endforeach ?>
+</div>
 
 <?php snippet('footer') ?>
