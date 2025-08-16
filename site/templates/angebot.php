@@ -47,7 +47,7 @@ use Kirby\Cms\Page;
         <?php endif ?>
       </table>
     </div>
-    <?php if ($page->content()->widget() != null): ?>
+    <?php if ($page->content()->widget()->toUrl() != null): ?>
       <div class="mt-12">
         <div class="flex justify-between items-center mb-4">
           <h1 class="text-2xl">Anmeldung</h1>
@@ -60,7 +60,7 @@ use Kirby\Cms\Page;
           </a>
         </div>
         <iframe
-          src="<?= $page->content()->widget() ?>"
+          src="<?= $page->content()->widget()->toUrl() ?>"
           class="w-full h-144"
         ></iframe>
       </div>
