@@ -18,7 +18,17 @@ tabs:
         width: 1/2
         sections:
           pages:
+            label: Seiten
             type: pages
+            templates: [default, text]
+          specialpages:
+            label: Spezialseiten
+            type: pages
+            templatesIgnore:
+              - default
+              - text
+              - angebot
+
 
   meta:
     label: Meta
@@ -45,3 +55,14 @@ tabs:
                   link:
                     label: Link
                     type: url
+              footerlinks:
+                type: structure
+                fields:
+                  label:
+                    label: Label
+                    type: text
+                    required: true
+                  url:
+                    label: URL
+                    type: link
+                    required: true

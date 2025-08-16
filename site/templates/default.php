@@ -18,7 +18,7 @@ use Kirby\Panel\Page;
   <section class="mt-8 grid grid-cols-12 gap-12">
     <?php foreach ($layout->columns() as $column): ?>
       <div style="grid-column: span <?= $column->span() ?>">
-        <div class="prose">
+        <div class="prose max-w-none">
           <?= $column->blocks() ?>
         </div>
       </div>

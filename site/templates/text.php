@@ -14,7 +14,7 @@ use Kirby\Panel\Page;
 </div>
 
 <!-- Content -->
-<article class="prose">
+<article class="prose max-w-none">
   <?= $page->text()->kt() ?>
 </article>
 
