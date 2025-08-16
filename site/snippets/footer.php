@@ -15,7 +15,8 @@ use Kirby\Panel\Site;
     <!-- Partner -->
     <div class="py-4 flex flex-wrap items-center justify-center gap-4">
       <?php foreach ($site->sponsors()->toStructure() as $sponsor): ?>
-        <img class="h-12" src="<?= $sponsor->logo()->toFile()->url() ?>" alt="<?= $sponsor->name() ?>">
+        <img class="h-12 w-auto max-w-[200px] max-h-12 object-contain object-center"
+             src="<?= $sponsor->logo()->toFile()->url() ?>" alt="<?= $sponsor->name() ?>">
       <?php endforeach ?>
     </div>
     <div>
