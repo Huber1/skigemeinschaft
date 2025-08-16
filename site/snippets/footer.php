@@ -16,8 +16,15 @@ use Kirby\Panel\Site;
     <h3 class="mt-8 text-lg font-medium">Unsere Partner</h3>
     <div class="mt-6 w-full md:w-2/3 lg:w-1/2 flex flex-wrap items-center justify-center gap-4">
       <?php foreach ($site->sponsors()->toStructure() as $sponsor): ?>
-        <img class="h-10 w-auto max-w-[8rem] max-h-12 object-contain object-center"
-             src="<?= $sponsor->logo()->toFile()->url() ?>" alt="<?= $sponsor->name() ?>">
+        <?php if ($sponsor->link()->toUrl() != null): ?>
+          <a href="<?= $sponsor->link()->toUrl() ?>">
+            <img class="h-10 w-auto max-w-[8rem] max-h-12 object-contain object-center"
+                 src="<?= $sponsor->logo()->toFile()->url() ?>" alt="<?= $sponsor->name() ?>">
+          </a>
+        <?php else: ?>
+          <img class="h-10 w-auto max-w-[8rem] max-h-12 object-contain object-center"
+               src="<?= $sponsor->logo()->toFile()->url() ?>" alt="<?= $sponsor->name() ?>">
+        <?php endif ?>
       <?php endforeach ?>
     </div>
     <div class="mt-4">
