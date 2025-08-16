@@ -13,7 +13,11 @@ use Kirby\Panel\Site;
       <?= $site->footertext() ?>
     </div>
     <!-- Partner -->
-    <div class="py-4">PARTNER</div>
+    <div class="py-4 flex flex-wrap items-center justify-center gap-4">
+      <?php foreach ($site->sponsors()->toStructure() as $sponsor): ?>
+        <img class="h-12" src="<?= $sponsor->logo()->toFile()->url() ?>" alt="<?= $sponsor->name() ?>">
+      <?php endforeach ?>
+    </div>
     <div>
       <a href="#">Teilnahmebedingungen</a> /
       <a href="#">Datenschutzerklärung</a> /

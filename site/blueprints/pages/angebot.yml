@@ -30,7 +30,7 @@ columns:
         type: fields
         fields:
           cover:
-            extends: fields/cover
+            extends: fields/image
             required: true
           startDate:
             type: date

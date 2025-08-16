@@ -4,19 +4,44 @@
 # In this example blueprint, we also show subpages of the `photography` and `notes` pages.
 # More about the site blueprint: https://getkirby.com/docs/reference/panel/blueprints/site
 
-# The layout of this form has two columns
-columns:
-  main:
-    width: 1/2
-    sections:
-      angebote: sections/angebote
-  sidebar:
-    width: 1/2
-    sections:
-      pages:
-        type: pages
-      footer:
-        type: fields
-        fields:
-          footertext:
-            type: writer
+
+tabs:
+  pages:
+    label: Pages
+    icon: page
+    columns:
+      main:
+        width: 1/2
+        sections:
+          angebote: sections/angebote
+      sidebar:
+        width: 1/2
+        sections:
+          pages:
+            type: pages
+
+  meta:
+    label: Meta
+    icon: info
+    columns:
+      main:
+        width: 1/2
+        sections:
+          footer:
+            type: fields
+            fields:
+              footertext:
+                type: writer
+              sponsors:
+                type: structure
+                fields:
+                  name:
+                    label: Name
+                    type: text
+                    required: true
+                  logo:
+                    extends: fields/image
+                    required: true
+                  link:
+                    label: Link
+                    type: url
