@@ -32,10 +32,6 @@ columns:
           cover:
             extends: fields/image
             required: true
-          startDate:
-            type: date
-            display: DD.MM.YYYY
-            label: Startdatum für Sortierung
           termin:
             type: text
             label: Termin
