@@ -13,6 +13,7 @@ columns:
         label: Beschreibung
         type: textarea
         autofocus: true
+        required: true
       eigenschaften:
         label: Eigenschaften
         type: structure
