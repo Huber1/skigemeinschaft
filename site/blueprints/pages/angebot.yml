@@ -24,6 +24,9 @@ columns:
           value:
             label: Wert
             type: writer
+      sidebar:
+        label: Sidebar
+        type: textarea
 
   - width: 1/3
     sections:

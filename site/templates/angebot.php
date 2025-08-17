@@ -92,6 +92,9 @@ use Kirby\Cms\Page;
         src="<?= $page->content()->cover()->toFile()->url() ?>"
         class="rounded-lg">
     <?php endif ?>
+    <div class="mt-4 prose max-w-none">
+      <?= $page->content()->sidebar()->kirbytext() ?>
+    </div>
   </div>
 </div>
 
