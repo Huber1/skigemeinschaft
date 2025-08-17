@@ -34,8 +34,7 @@ tabs:
     label: Meta
     icon: info
     columns:
-      main:
-        width: 1/2
+      - width: 1/2
         sections:
           footer:
             type: fields
@@ -66,3 +65,14 @@ tabs:
                     label: URL
                     type: link
                     required: true
+      - width: 1/2
+        sections:
+          seo:
+            type: fields
+            fields:
+              seodescription:
+                label: Beschreibung für Suchmaschinen
+                type: text
+                help: Diesen Text verwenden Suchmaschinen wie Google für die Zusammenfassung in den Suchergebnissen
+                spellcheck: true
+

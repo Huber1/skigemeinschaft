@@ -13,13 +13,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <?php
-  /*
-    In the title tag we show the title of our
-    site and the title of the current page
-  */
-  ?>
   <title><?= $site->title()->esc() ?> | <?= $page->title()->esc() ?></title>
+
+  <?php
+  $seodescription = trim($site->seodescription());
+  if (!empty($seodescription)): ?>
+    <meta name="description" content="<?= $seodescription ?>">
+  <?php endif ?>
 
   <?php
   /*
@@ -46,7 +46,7 @@
 
 <div class="px-8">
   <header class="max-w-7xl m-auto py-2 md:py-0 flex flex-col md:flex-row justify-between items-center">
-    <a class="block px-2 py-4" href="<?= $site->url() ?>">
+    <a class="block px-2 py-4" href="<?= $site->url() ?>" aria-label="Root Page">
       <img
         src="<?= asset('assets/images/logo.svg')->url() ?>"
         alt=""
