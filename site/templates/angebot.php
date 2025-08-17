@@ -41,8 +41,28 @@ use Kirby\Cms\Page;
         <?php endforeach ?>
         <?php if ($page->content()->anmeldeschluss() != null): ?>
           <tr>
-            <td class="font-bold pr-4">Anmeldeschluss:</td>
-            <td class="prose"><?= $page->content()->anmeldeschluss()->toDate('d.m.Y') ?></td>
+            <td class="font-bold align-top pr-4">Anmeldeschluss:</td>
+            <td class="prose pb-4"><?= $page->content()->anmeldeschluss()->toDate('d.m.Y') ?></td>
+          </tr>
+        <?php endif ?>
+        <?php
+        $user = $user = $page->content()->contact()->toUser();
+        $faq = $page->parent()->content()->faq()->toUrl();
+        if ($user || $faq):
+          ?>
+          <tr>
+            <td class="font-bold align-top pr-4">Weitere Fragen?</td>
+            <td class="pb-4 flex flex-col gap-2">
+              <?php if ($faq): ?>
+                <a href="<?= $faq ?>">FAQ</a>
+              <?php endif ?>
+
+              <?php if ($faq && $user): ?>
+                - oder direkt bei -
+              <?php endif ?>
+
+              <?php if ($user) snippet('user', ['user' => $user]) ?>
+            </td>
           </tr>
         <?php endif ?>
       </table>

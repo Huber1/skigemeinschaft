@@ -47,3 +47,7 @@ columns:
             label: Yolawo Widget URL
             type: url
             placeholder: https://widgets.yolawo.de/w/...
+          contact:
+            label: Ansprechpartner
+            type: users
+            multiple: false

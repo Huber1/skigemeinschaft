@@ -1,7 +1,13 @@
 title: Angebote
 
-sections:
-  angebote:
-    extends: sections/angebote
-    label: Angebote
-
+columns:
+  - width: 2/3
+    sections:
+      angebote:
+        extends: sections/angebote
+        label: Angebote
+  - width: 1/3
+    fields:
+      faq:
+        label: FAQ Page
+        type: link
