@@ -29,7 +29,7 @@ use Kirby\Panel\Site;
     </div>
     <div class="mt-4">
       <?php foreach ($site->footerlinks()->toStructure() as $i => $link): ?>
-        <a href="<?= $link->url()->toUrl() ?>"><?= $link->label() ?></a>
+        <a class="font-medium" href="<?= $link->url()->toUrl() ?>"><?= $link->label() ?></a>
         <?php if ($i < $site->footerlinks()->toStructure()->count() - 1): ?>
           <span class="mx-2">/</span>
         <?php endif ?>

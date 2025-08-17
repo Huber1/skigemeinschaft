@@ -1,20 +1,26 @@
 <?php
 
+use Kirby\Cms\File;
 use Kirby\Cms\Page;
 
 /**
  * @var Page $page
+ * @var File|null $backgroundFile
  */
 
+$backgroundFile = $page->content()->background()->toFile();
 ?>
-<?php snippet('header') ?>
+
+<?php snippet('header', slots: true) ?>
+<link rel="preload" fetchpriority="high" as="image" href="<?= $backgroundFile->url() ?>">
+<?php endsnippet() ?>
 
 
 <!-- Hero section -->
 <div
   class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-center"
-  <?php if ($page->content()->background()->toFile() !== null): ?>
-    style="background-image: url('<?= $page->content()->background()->toFile()->url() ?>')"
+  <?php if ($backgroundFile !== null): ?>
+    style="background-image: url('<?= $backgroundFile->url() ?>')"
   <?php endif; ?>
 >
 
@@ -24,7 +30,8 @@ use Kirby\Cms\Page;
     class="h-64">
 
   <div class="flex gap-4">
-    <a href="<?= $page->content()->angebote_url()->toUrl() ?>" class="block px-4 py-2 bg-salmon text-inherit">Angebote</a>
+    <a href="<?= $page->content()->angebote_url()->toUrl() ?>"
+       class="block px-4 py-2 bg-salmon text-inherit">Angebote</a>
     <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>" class="block px-4 py-2 bg-salmon text-inherit">Mitglied
       werden</a>
   </div>

@@ -3,6 +3,7 @@
 /**
  * @var \Kirby\Cms\Site $site
  * @var \Kirby\Cms\Page $page
+ * @var $slot
  */
 
 ?>
@@ -33,13 +34,8 @@
     '@auto'
   ]) ?>
 
-  <?php
-  /*
-    The `url()` helper is a great way to create reliable
-    absolute URLs in Kirby that always start with the
-    base URL of your site.
-  */
-  ?>
+  <?= $slot ?>
+
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
 <body>
