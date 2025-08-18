@@ -71,8 +71,8 @@ tabs:
             type: fields
             fields:
               seodescription:
-                label: Beschreibung für Suchmaschinen
+                label: Kurzbeschreibung für Suchmaschinen
                 type: text
-                help: Diesen Text verwenden Suchmaschinen wie Google für die Zusammenfassung in den Suchergebnissen
+                help: Diesen Text verwendet z.B. Google für die Zusammenfassung in den Suchergebnissen
                 spellcheck: true
 
