@@ -47,3 +47,21 @@ Sponsors:
   logo:
     - 'file://0ksomowh5mqcw6qi'
   link: 'http://www.intersport-utzinger.de/'
+
+----
+
+Footerlinks:
+
+-
+  label: Teilnahmebedingungen
+  url: 'page://0zkgcob9hspfwmin'
+-
+  label: Datenschutz
+  url: 'page://anqrdevjvfz4f7kj'
+-
+  label: Impressum
+  url: 'page://qykh7y8ujlixx7zk'
+
+----
+
+Seodescription: Die Skigemeinschaft Forstenried-Gauting e.V. ist eine DSV-Skischule mit über 40 lizenzierten Ski- & Snowboardlehrer:innen. Seit über 50 Jahren vermitteln wir Wintersport-Erlebnisse im Münchner Süden
