@@ -6,6 +6,8 @@
  * @var $slot
  */
 
+$padding ??= true
+
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -75,5 +77,5 @@
   </header>
 </div>
 
-<div class="px-4">
+<div class="<?php e($padding, "px-4") ?>">
   <main role="main" class="max-w-7xl m-auto pb-16">

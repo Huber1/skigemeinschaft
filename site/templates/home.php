@@ -11,14 +11,14 @@ use Kirby\Cms\Page;
 $backgroundFile = $page->content()->background()->toFile();
 ?>
 
-<?php snippet('header', slots: true) ?>
+<?php snippet('header', ['padding' => false], slots: true) ?>
 <link rel="preload" fetchpriority="high" as="image" href="<?= $backgroundFile->url() ?>">
 <?php endsnippet() ?>
 
 
 <!-- Hero section -->
 <div
-  class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-center"
+  class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-center lg:rounded-lg"
   <?php if ($backgroundFile !== null): ?>
     style="background-image: url('<?= $backgroundFile->url() ?>')"
   <?php endif; ?>
@@ -31,9 +31,9 @@ $backgroundFile = $page->content()->background()->toFile();
 
   <div class="flex gap-4">
     <a href="<?= $page->content()->angebote_url()->toUrl() ?>"
-       class="block px-4 py-2 bg-salmon text-inherit">Angebote</a>
-    <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>" class="block px-4 py-2 bg-salmon text-inherit">Mitglied
-      werden</a>
+       class="block px-4 py-2 rounded-lg bg-salmon text-inherit">Angebote</a>
+    <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>"
+       class="block px-4 py-2 rounded-lg bg-salmon text-inherit">Mitglied werden</a>
   </div>
 </div>
 
