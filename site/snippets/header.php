@@ -39,16 +39,29 @@ $padding ??= true
   <?= $slot ?>
 
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.getElementById('header-div');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          header.classList.add('lg:shadow-md');
+        } else {
+          header.classList.remove('lg:shadow-md');
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 
-<div class="px-8">
+<div id="header-div" class="px-8 lg:fixed lg:top-0 lg:left-0 lg:right-0 bg-white transition-shadow duration-400">
   <header class="max-w-7xl m-auto py-2 md:py-0 flex flex-col md:flex-row justify-between items-center">
     <a class="block px-2 py-4" href="<?= $site->url() ?>" aria-label="Root Page">
       <img
         src="<?= asset('assets/images/logo.svg')->url() ?>"
         alt=""
-        class="h-24 lg:h-16">
+        class="h-24 md:h-16">
     </a>
 
     <nav>
@@ -77,5 +90,5 @@ $padding ??= true
   </header>
 </div>
 
-<div class="<?php e($padding, "px-4") ?>">
+<div class="lg:mt-24 <?php e($padding, "px-4") ?>">
   <main role="main" class="max-w-7xl m-auto pb-16">
