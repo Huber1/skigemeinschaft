@@ -48,7 +48,7 @@ $padding ??= true
       <img
         src="<?= asset('assets/images/logo.svg')->url() ?>"
         alt=""
-        class="h-16">
+        class="h-24 lg:h-16">
     </a>
 
     <nav>
