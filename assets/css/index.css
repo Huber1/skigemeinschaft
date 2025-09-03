@@ -36,9 +36,26 @@
   a {
     @apply text-salmon;
   }
+}
 
-  /* Not the best way, but the spacing is just too much */
-  .prose li p {
-    margin: 0 !important;
+@layer utilities {
+  .grid-column {
+    @media (min-width: 64rem ) {
+      grid-column: span var(--columns);
+    }
+  }
+
+  .prose {
+    & a {
+      @apply text-salmon no-underline;
+    }
+
+    & li p {
+      @apply m-0;
+    }
+
+    & img {
+      @apply rounded-lg;
+    }
   }
 }

@@ -25,7 +25,7 @@ function format_age(int $minAge, int $maxAge): string|null
 </div>
 
 <!-- Angebote Cards -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
   <?php foreach ($page->children() as $child): ?>
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
       <div class="p-2 flex gap-4 items-stretch bg-salmon-50  rounded-2xl">

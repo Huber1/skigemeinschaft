@@ -75,4 +75,5 @@
   </header>
 </div>
 
-<main role="main" class="max-w-7xl m-auto pb-16">
+<div class="px-4">
+  <main role="main" class="max-w-7xl m-auto pb-16">

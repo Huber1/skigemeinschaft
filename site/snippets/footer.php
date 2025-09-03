@@ -7,6 +7,8 @@ use Kirby\Panel\Site;
 
 ?>
 </main>
+</div>
+
 <footer class="bg-primary py-4 text-white text-sm">
   <div class="max-w-7xl m-auto px-4 flex flex-col items-center">
     <div class="text-center prose max-w-none text-inherit text-sm">

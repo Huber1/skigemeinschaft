@@ -37,12 +37,12 @@ $backgroundFile = $page->content()->background()->toFile();
   </div>
 </div>
 
-<div class="px-8">
+<div class="px-8 mt-16">
   <!-- Content -->
   <?php foreach ($page->layout()->toLayouts() as $layout): ?>
-    <section class="mt-8 grid grid-cols-12 gap-12">
+    <section class="mt-8 grid grid-cols-[1fr] lg:grid-cols-12 gap-4 md:gap-12">
       <?php foreach ($layout->columns() as $column): ?>
-        <div class="mb-12" style="grid-column: span <?= $column->span() ?>">
+        <div class="grid-column mb-8" style="--columns:<?= $column->span() ?>">
           <div class="prose">
             <?= $column->blocks() ?>
           </div>

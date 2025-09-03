@@ -22,7 +22,7 @@ use Kirby\Cms\Page;
 </div>
 
 <!-- Content -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-8">
   <div class="lg:col-span-2">
     <div class="prose max-w-none">
       <?= $page->content()->text()->kirbytext() ?>
@@ -86,7 +86,7 @@ use Kirby\Cms\Page;
       </div>
     <?php endif ?>
   </div>
-  <div>
+  <div class="order-first lg:order-none">
     <?php if ($page->content()->cover()->toFile() != null): ?>
       <img
         src="<?= $page->content()->cover()->toFile()->url() ?>"
