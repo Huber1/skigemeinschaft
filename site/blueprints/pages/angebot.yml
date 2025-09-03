@@ -60,7 +60,7 @@ columns:
             step: 1
           maxAlter:
             type: number
-            label: Höchstalter (optional)
+            label: Höchstalter
             min: 0
             max: 99
             step: 1
