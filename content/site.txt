@@ -6,61 +6,11 @@ Footertext: <p>Die Skigemeinschaft Forstenried-Gauting e.V. hat ganz klar den Wi
 
 ----
 
-Sponsors:
-
--
-  name: 'Gautinger SC'
-  logo:
-    - 'file://qytqio53wasu97t8'
-  link: 'http://www.gautinger-sportclub.de/'
-  image:
-    - 'file://qytqio53wasu97t8'
--
-  name: Webasto
-  logo:
-    - 'file://zegczeulokstuvni'
-  link: 'https://www.webasto-group.com/de/'
-  image:
-    - 'file://zegczeulokstuvni'
--
-  name: 'TSV Forstenried'
-  logo:
-    - 'file://2glsezxkygredioz'
-  link: 'http://www.tsv-forstenried.de/'
--
-  name: 'DSV Skischule'
-  logo:
-    - 'file://13lsgtngguwawcas'
-  link: ''
--
-  name: 'Autobus Oberbayern'
-  logo:
-    - 'file://7xdgncjqrheijr4u'
-  link: 'https://www.autobusoberbayern.de/'
--
-  name: HEAD
-  logo:
-    - 'file://jmu1z7xlzhi849jx'
-  link: 'https://www.head.com/de/sports/ski/'
--
-  name: 'Intersport Utzinger'
-  logo:
-    - 'file://0ksomowh5mqcw6qi'
-  link: 'http://www.intersport-utzinger.de/'
+Sponsors: []
 
 ----
 
-Footerlinks:
-
--
-  label: Teilnahmebedingungen
-  url: 'page://0zkgcob9hspfwmin'
--
-  label: Datenschutz
-  url: 'page://anqrdevjvfz4f7kj'
--
-  label: Impressum
-  url: 'page://qykh7y8ujlixx7zk'
+Footerlinks: []
 
 ----
 
