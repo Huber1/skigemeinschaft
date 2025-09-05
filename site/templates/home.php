@@ -12,7 +12,9 @@ $backgroundFile = $page->content()->background()->toFile();
 ?>
 
 <?php snippet('header', ['padding' => false], slots: true) ?>
-<link rel="preload" fetchpriority="high" as="image" href="<?= $backgroundFile->url() ?>">
+<?php if ($backgroundFile !== null): ?>
+  <link rel="preload" fetchpriority="high" as="image" href="<?= $backgroundFile->url() ?>">
+<?php endif; ?>
 <?php endsnippet() ?>
 
 
