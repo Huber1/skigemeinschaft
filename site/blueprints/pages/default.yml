@@ -9,9 +9,8 @@ status:
     label: Menüseite
     text: Die Seite hat einen Eintrag in der Hauptnavigation
 
-sections:
-  content:
-    type: fields
+columns:
+  - width: 3/4
     fields:
       layout:
         label: Inhalt
@@ -22,3 +21,13 @@ sections:
           - "1/3, 2/3"
           - "2/3, 1/3"
           - "1/3, 1/3, 1/3"
+  - width: 1/4
+    fields:
+      size:
+        label: Seitenbreite
+        type: select
+        default: default
+        required: true
+        options:
+          default: Standard
+          small: Schmal
