@@ -6,7 +6,16 @@
  * @var $slot
  */
 
-$padding ??= true
+$padding ??= true;
+
+$maxSize = "max-w-5xl";
+$sizeField = $page->content()->size();
+if ($sizeField->exists()) {
+  switch ($sizeField->value()) {
+    case "small":
+      $maxSize = "max-w-3xl";
+  }
+}
 
 ?>
 <!DOCTYPE html>
@@ -91,4 +100,4 @@ $padding ??= true
 </div>
 
 <div class="lg:mt-24 <?php e($padding, "px-4") ?>">
-  <main role="main" class="max-w-7xl m-auto pb-16">
+  <main role="main" class="<?= $maxSize ?> m-auto pb-16">

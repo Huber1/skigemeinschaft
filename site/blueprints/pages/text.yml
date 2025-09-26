@@ -16,12 +16,18 @@ status:
 # Content area width 2 columns and 3 sections: fields, pages, and files
 # Columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
 columns:
-  main:
-    sections:
-      # Fields section: https://getkirby.com/docs/reference/panel/sections/fields
-      fields:
-        type: fields
-        fields:
-          text:
-            type: textarea
-            size: huge
+  - width: 3/4
+    fields:
+      text:
+        type: textarea
+        size: huge
+  - width: 1/4
+    fields:
+      size:
+        label: Seitenbreite
+        type: select
+        default: default
+        required: true
+        options:
+          default: Standard
+          small: Schmal
