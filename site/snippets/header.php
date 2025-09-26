@@ -8,7 +8,7 @@
 
 $padding ??= true;
 
-$maxSize = "max-w-5xl";
+$maxSize = "max-w-7xl";
 $sizeField = $page->content()->size();
 if ($sizeField->exists()) {
   switch ($sizeField->value()) {
