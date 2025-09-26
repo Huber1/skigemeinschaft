@@ -1,19 +1,70 @@
 @import "tailwindcss";
 
-@plugin "@tailwindcss/typography";
+/*Font Imports*/
+@font-face {
+  font-family: 'Museo300';
+  src: url('/assets/fonts/museo/Museo300-Regular-webfont.eot');
+  src: url('/assets/fonts/museo/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/museo/Museo300-Regular-webfont.woff') format('woff'),
+  url('/assets/fonts/museo/Museo300-Regular-webfont.ttf') format('truetype'),
+  url('/assets/fonts/museo/Museo300-Regular-webfont.svg#webfont') format('svg');
+}
+
+@font-face {
+  font-family: 'Museo700';
+  src: url('/assets/fonts/museo/Museo700-Regular-webfont.eot');
+  src: url('/assets/fonts/museo/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/museo/Museo700-Regular-webfont.woff') format('woff'),
+  url('/assets/fonts/museo/Museo700-Regular-webfont.ttf') format('truetype'),
+  url('/assets/fonts/museo/Museo700-Regular-webfont.svg#webfont') format('svg');
+}
+
+/* gudea-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/gudea/gudea-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/gudea/gudea-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/assets/fonts/gudea/gudea-v16-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('/assets/fonts/gudea/gudea-v16-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */ url('/assets/fonts/gudea/gudea-v16-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */ url('/assets/fonts/gudea/gudea-v16-latin-regular.svg#Gudea') format('svg'); /* Legacy iOS */
+}
+
+/* gudea-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Gudea';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/assets/fonts/gudea/gudea-v16-latin-italic.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/gudea/gudea-v16-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/assets/fonts/gudea/gudea-v16-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('/assets/fonts/gudea/gudea-v16-latin-italic.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */ url('/assets/fonts/gudea/gudea-v16-latin-italic.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */ url('/assets/fonts/gudea/gudea-v16-latin-italic.svg#Gudea') format('svg'); /* Legacy iOS */
+}
+
+/* gudea-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/gudea/gudea-v16-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/gudea/gudea-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/assets/fonts/gudea/gudea-v16-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url('/assets/fonts/gudea/gudea-v16-latin-700.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */ url('/assets/fonts/gudea/gudea-v16-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
 
 @theme {
+  --font-gudea: "Gudea", sans-serif;
+  --font-museo700: "Museo700";
+  --font-museo300: "Museo300";
+
   --color-primary-50: #e7fffc;
-  --color-primary-100: #c2fff7;
-  --color-primary-200: #8cfff0;
-  --color-primary-300: #3dffe5;
-  --color-primary-400: #00ffde;
-  --color-primary-500: #00fffc;
-  --color-primary-600: #00cde3;
-  --color-primary-700: #00a1b5;
-  --color-primary-800: #007f90;
-  --color-primary-900: #006e80; /* Primary */
-  --color-primary-950: #004555;
+  --color-primary-100: #c2fff6;
+  --color-primary-200: #8cffef;
+  --color-primary-300: #3dffe4;
+  --color-primary-400: #00ffdc;
+  --color-primary-500: #00fffa;
+  --color-primary-600: #00cfe3;
+  --color-primary-700: #00a2b5;
+  --color-primary-800: #008090;
+  --color-primary-900: #006f80; /* Primary */
+  --color-primary-950: #004655;
 
   --color-salmon-50: #fef2f3;
   --color-salmon-100: #fde6e8;
@@ -28,8 +79,24 @@
   --color-salmon-950: #470a1a;
 
   /* Colors are generated from this: */
-  --color-primary: #006e80;
+  --color-primary: #006f80;
   --color-salmon: #e85269;
+}
+
+@layer base {
+  body {
+    @apply font-gudea;
+  }
+  h1, h2, h3, h4 {
+    @apply text-primary font-museo300;
+  }
+
+  h1 {
+    @apply font-museo700 text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
 }
 
 @layer components {
@@ -45,7 +112,12 @@
     }
   }
 
+  /**
+  Need to redefine stuff for the prose class (typography plugin)
+   */
   .prose {
+    @apply font-gudea;
+
     & a {
       @apply text-salmon no-underline;
     }
@@ -57,5 +129,11 @@
     & img {
       @apply rounded-lg;
     }
+
+    & h1, & h2, & h3, & h4 {
+      @apply text-primary;
+    }
   }
 }
+
+@plugin "@tailwindcss/typography";

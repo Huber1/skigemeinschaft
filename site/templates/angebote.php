@@ -34,7 +34,7 @@ function format_age(int $minAge, int $maxAge): string|null
           style="background-image: url('<?= $child->cover()->toFile()->url() ?>')">
         </div>
         <div class="flex-3/5 flex flex-col gap-2">
-          <h2 class="text-xl font-medium group-hover:text-salmon">
+          <h2 class="text-xl font-medium text-salmon group-hover:text-salmon">
             <?= $child->title() ?>
           </h2>
           <div class="text-primary flex items-center gap-2">
