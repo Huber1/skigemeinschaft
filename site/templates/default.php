@@ -9,7 +9,7 @@ use Kirby\Panel\Page;
 <?php snippet('header') ?>
 
 <div class="py-6">
-  <h1 class="text-center text-3xl"><?= $page->title()->esc() ?></h1>
+  <h1><?= $page->title()->esc() ?></h1>
 </div>
 
 <!-- Content -->

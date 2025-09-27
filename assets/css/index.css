@@ -83,27 +83,6 @@
   --color-salmon: #e85269;
 }
 
-@layer base {
-  body {
-    @apply font-gudea;
-  }
-  h1, h2, h3, h4 {
-    @apply text-primary font-museo300;
-  }
-
-  h1 {
-    @apply font-museo700 text-3xl;
-  }
-  h2 {
-    @apply text-2xl;
-  }
-}
-
-@layer components {
-  a {
-    @apply text-salmon;
-  }
-}
 
 @layer utilities {
   .grid-column {
@@ -136,4 +115,58 @@
   }
 }
 
-@plugin "@tailwindcss/typography";
+@layer base {
+  a {
+    @apply text-salmon;
+  }
+
+  body {
+    @apply font-gudea;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-primary font-museo300;
+  }
+
+  h1 {
+    @apply font-museo700 text-3xl text-center;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  hr {
+    @apply text-slate-200 my-6;
+  }
+
+  .prose {
+    @apply text-slate-700;
+
+    & h1 {
+      @apply mb-6;
+    }
+
+    & h2 {
+      @apply mb-4;
+    }
+
+    & h3 {
+      @apply mb-2;
+    }
+
+    & p {
+      @apply mb-5;
+    }
+  }
+}
+
+/*@plugin "@tailwindcss/typography";*/

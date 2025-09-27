@@ -10,7 +10,7 @@ use Kirby\Cms\Page;
 <?php snippet('header') ?>
 
 <div class="py-6">
-  <h1 class="text-center text-3xl"><?= $page->title()->esc() ?></h1>
+  <h1><?= $page->title()->esc() ?></h1>
 </div>
 
 <div class="mb-4 flex items-center text-salmon font-medium">
@@ -70,7 +70,7 @@ use Kirby\Cms\Page;
     <?php if ($page->content()->widget()->toUrl() != null): ?>
       <div class="mt-12">
         <div class="flex justify-between items-center mb-4">
-          <h1 class="text-2xl">Anmeldung</h1>
+          <h2>Anmeldung</h2>
           <a href="#" class="flex items-center gap-1">
             In neuem Tab öffnen
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
