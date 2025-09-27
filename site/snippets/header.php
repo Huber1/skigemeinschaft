@@ -54,29 +54,28 @@ if ($sizeField->exists()) {
       const headerImg = document.querySelector('#header-image');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
-          headerImg.classList.add('lg:bottom-0');
-          headerImg.classList.remove('lg:shadow-md');
+          headerImg.classList.add('md:bottom-0');
+          headerImg.classList.remove('md:shadow-md');
         } else {
-          headerImg.classList.remove('lg:bottom-0');
-          headerImg.classList.add('lg:shadow-md');
+          headerImg.classList.remove('md:bottom-0');
+          headerImg.classList.add('md:shadow-md');
         }
       });
     });
   </script>
 </head>
 <body>
-
-<div id="header-div" class="px-8 lg:fixed lg:top-0 lg:left-0 lg:right-0 bg-primary-50 shadow-md">
+<div id="header-div" class="px-8 md:fixed md:top-0 md:left-0 md:right-0 bg-primary-50 shadow-md">
   <header class="max-w-7xl m-auto py-2 md:py-0">
     <a
       id="header-image"
-      class="block absolute px-2 py-4 bg-primary-50 lg:transition-all duration-700 lg:-bottom-20 lg:shadow-md"
+      class="block md:absolute px-2 md:py-4 bg-primary-50 md:transition-all duration-700 md:-bottom-20 md:shadow-md"
       href="<?= $site->url() ?>"
       aria-label="Root Page">
       <img
         src="<?= asset('assets/images/logo.svg')->url() ?>"
         alt=""
-        class="h-24 md:h-32">
+        class="mx-auto h-24 md:h-32">
     </a>
     <div class="flex flex-col md:flex-row justify-center items-center text-primary text-lg font-medium">
       <nav>
