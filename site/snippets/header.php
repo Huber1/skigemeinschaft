@@ -19,7 +19,7 @@ if ($sizeField->exists()) {
 
 ?>
 <!DOCTYPE html>
-<html lang="de" class="bg-white">
+<html lang="de" class="bg-white min-h-screen flex flex-col">
 <head>
 
   <meta charset="utf-8">
@@ -64,7 +64,7 @@ if ($sizeField->exists()) {
     });
   </script>
 </head>
-<body>
+<body class="flex-1 flex flex-col">
 <div id="header-div" class="px-8 md:fixed md:top-0 md:left-0 md:right-0 bg-primary-50 shadow-md">
   <header class="max-w-7xl m-auto py-2 md:py-0">
     <a
@@ -105,5 +105,5 @@ if ($sizeField->exists()) {
   </header>
 </div>
 
-<div class="lg:mt-24 <?php e($padding, "px-4") ?>">
+<div class="flex-1 lg:mt-24 <?php e($padding, "px-4") ?>">
   <main role="main" class="<?= $maxSize ?> m-auto pb-16">

@@ -26,6 +26,7 @@ function format_age(int $minAge, int $maxAge): string|null
 
 <?php
 $children = $page->children();
+$children = [];
 if (empty($children)):
   ?>
   <div class="text-center font-bold mt-4">
