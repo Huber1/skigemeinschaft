@@ -148,6 +148,7 @@
     @apply text-slate-200 my-6;
   }
 
+  /* Styles for freetext fields */
   .prose {
     @apply text-slate-700;
 
@@ -165,6 +166,14 @@
 
     & p {
       @apply mb-5;
+    }
+
+    ul {
+      @apply list-disc ps-4 mb-5;
+
+      & ::marker {
+        @apply text-slate-400
+      }
     }
   }
 }
