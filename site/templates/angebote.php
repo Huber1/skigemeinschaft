@@ -24,9 +24,18 @@ function format_age(int $minAge, int $maxAge): string|null
   <h1><?= $page->title()->esc() ?></h1>
 </div>
 
+<?php
+$children = $page->children();
+if (empty($children)):
+  ?>
+  <div class="text-center font-bold mt-4">
+    Die Angebote sind für diese Saison noch nicht befüllt. Schau gerne später nochmal vorbei!
+  </div>
+<?php endif; ?>
+
 <!-- Angebote Cards -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-  <?php foreach ($page->children() as $child): ?>
+  <?php foreach ($children as $child): ?>
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
       <div class="p-2 flex gap-4 items-stretch bg-salmon-50  rounded-2xl">
         <div
