@@ -67,11 +67,13 @@ use Kirby\Cms\Page;
         <?php endif ?>
       </table>
     </div>
-    <?php if ($page->content()->widget()->toUrl() != null): ?>
+    <?php
+    $widget = $page->content()->widget()->toUrl();
+    if ($widget != null): ?>
       <div class="mt-12">
         <div class="flex justify-between items-center mb-4">
           <h2>Anmeldung</h2>
-          <a href="#" class="flex items-center gap-1">
+          <a href="<?= $widget ?>" class="flex items-center gap-1" target="_blank">
             In neuem Tab öffnen
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
               <path
@@ -80,7 +82,7 @@ use Kirby\Cms\Page;
           </a>
         </div>
         <iframe
-          src="<?= $page->content()->widget()->toUrl() ?>"
+          src="<?= $widget ?>"
           class="w-full h-144"
         ></iframe>
       </div>
