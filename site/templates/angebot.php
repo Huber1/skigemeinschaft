@@ -41,7 +41,7 @@ use Kirby\Cms\Page;
         <?php endforeach ?>
         <?php if ($anmeldeschluss = $page->content()->anmeldeschluss()->toDate('d.m.Y')): ?>
           <tr>
-            <td class="font-bold align-top pr-4">Anmeldeschluss:</td>
+            <td class="font-bold align-top pr-4">Anmeldeschluss</td>
             <td class="prose pb-4"><?= $anmeldeschluss ?></td>
           </tr>
         <?php endif ?>
