@@ -39,7 +39,7 @@ if (empty($children)):
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
       <div class="h-full p-2 flex flex-col md:flex-row gap-4 items-stretch bg-salmon-50  rounded-2xl">
         <div
-          class="aspect-3/2 flex-2/5 bg-cover bg-center rounded-lg"
+          class="aspect-3/2 md:aspect-unset flex-2/5 bg-cover bg-center rounded-lg"
           style="background-image: url('<?= $child->cover()->toFile()->url() ?>')">
         </div>
         <div class="flex-3/5 flex flex-col gap-2">

@@ -81,6 +81,10 @@
   /* Colors are generated from this: */
   --color-primary: #006f80;
   --color-salmon: #e85269;
+
+
+  /* Additional properties */
+  --aspect-unset: unset;
 }
 
 
