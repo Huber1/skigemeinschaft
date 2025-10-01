@@ -37,9 +37,9 @@ if (empty($children)):
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
   <?php foreach ($children as $child): ?>
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
-      <div class="p-2 flex gap-4 items-stretch bg-salmon-50  rounded-2xl">
+      <div class="p-2 flex flex-col md:flex-row gap-4 items-stretch bg-salmon-50  rounded-2xl">
         <div
-          class="flex-2/5 bg-cover rounded-lg"
+          class="aspect-3/2 flex-2/5 bg-cover bg-center rounded-lg"
           style="background-image: url('<?= $child->cover()->toFile()->url() ?>')">
         </div>
         <div class="flex-3/5 flex flex-col gap-2">
