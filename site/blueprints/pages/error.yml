@@ -1,0 +1,9 @@
+title: Error
+
+fields:
+  image:
+    extends: fields/image
+    required: false
+  text:
+    type: textarea
+    size: small

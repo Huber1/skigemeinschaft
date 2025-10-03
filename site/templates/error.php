@@ -14,6 +14,15 @@ use Kirby\Panel\Page;
 </div>
 
 <!-- Content -->
-TODO ERROR
+<div class="flex flex-col items-center">
+  <?php if ($page->content()->image()->toFile() != null): ?>
+    <img
+      src="<?= $page->content()->image()->toFile()->url() ?>"
+      class="mb-8 rounded-lg">
+  <?php endif ?>
+  <div class="prose text-center max-w-xl">
+    <?= $page->content()->text()->kirbytext() ?>
+  </div>
+</div>
 
 <?php snippet('footer') ?>
