@@ -15,7 +15,7 @@ use Kirby\Panel\Site;
       <?= $site->footertext() ?>
     </div>
     <!-- Partner -->
-    <h3 class="mt-8 text-lg font-medium">Unsere Partner</h3>
+    <h3 class="mt-8 text-lg font-medium text-white">Unsere Partner</h3>
     <div class="mt-6 w-full md:w-2/3 lg:w-1/2 flex flex-wrap items-center justify-center gap-4">
       <?php foreach ($site->sponsors()->toStructure() as $sponsor): ?>
         <?php if ($sponsor->link()->toUrl() != null): ?>
