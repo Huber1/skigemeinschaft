@@ -77,7 +77,7 @@ if ($sizeField->exists()) {
         alt=""
         class="mx-auto h-24 md:h-32">
     </a>
-    <div class="flex flex-col md:flex-row justify-center items-center text-primary text-lg font-medium">
+    <div class="mt-2 lg:mt-0 flex flex-col md:flex-row justify-center items-center text-primary text-lg font-medium">
       <nav>
         <?php
         /*
@@ -96,7 +96,7 @@ if ($sizeField->exists()) {
           <a
             <?php e($item->isOpen(), 'aria-current="page"') ?>
             href="<?= $item->url() ?>"
-            class="block relative px-2 py-6 float-left text-inherit after:absolute after:right-0 after:top-1/2 after:translate-x-1/2 after:-translate-y-1/2 after:text-sm after:content-['⁄'] after:text-slate-400 last:after:content-none">
+            class="block relative px-2 py-3 md:py-6 float-left text-inherit after:absolute after:right-0 after:top-1/2 after:translate-x-1/2 after:-translate-y-1/2 after:text-sm after:content-['⁄'] after:text-slate-400 last:after:content-none">
             <?= $item->title()->esc() ?>
           </a>
         <?php endforeach ?>
