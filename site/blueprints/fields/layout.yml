@@ -15,6 +15,7 @@ fieldsets:
       - text
       - list
       - quote
+      - button
   media:
     label: Media
     type: group

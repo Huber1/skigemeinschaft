@@ -1,0 +1,11 @@
+type: button
+name: Button
+icon: url
+#preview: fields
+#wysiwyg: true
+label: "{{ text }}"
+fields:
+  text:
+    type: text
+  link:
+    type: link
