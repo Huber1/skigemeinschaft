@@ -54,6 +54,7 @@
   --font-museo700: "Museo700";
   --font-museo300: "Museo300";
 
+  --color-primary-20: #f4fffe;
   --color-primary-50: #e7fffc;
   --color-primary-100: #c2fff6;
   --color-primary-200: #8cffef;
@@ -93,6 +94,11 @@
     @media (min-width: 64rem ) {
       grid-column: span var(--columns);
     }
+  }
+
+  a.btn {
+    @apply block px-4 py-2 rounded-lg bg-salmon text-center;
+    color: var(--color-primary-20) !important;
   }
 
   /**
