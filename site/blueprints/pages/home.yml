@@ -44,3 +44,7 @@ columns:
           mitglied_werden_url:
             label: Mitglied Werden Link
             type: link
+      files:
+        label: Dateien
+        type: files
+        batch: true

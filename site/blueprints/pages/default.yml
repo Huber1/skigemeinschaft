@@ -22,12 +22,19 @@ columns:
           - "2/3, 1/3"
           - "1/3, 1/3, 1/3"
   - width: 1/4
-    fields:
-      size:
-        label: Seitenbreite
-        type: select
-        default: default
-        required: true
-        options:
-          default: Standard
-          small: Schmal
+    sections:
+      fields:
+        type: fields
+        fields:
+          size:
+            label: Seitenbreite
+            type: select
+            default: default
+            required: true
+            options:
+              default: Standard
+              small: Schmal
+      files:
+        label: Dateien
+        type: files
+        batch: true
