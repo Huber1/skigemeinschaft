@@ -20,7 +20,7 @@ $backgroundFile = $page->content()->background()->toFile();
 
 <!-- Hero section -->
 <div
-  class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-center lg:rounded-lg"
+  class="h-128 p-8 flex flex-col justify-center gap-16 items-center bg-cover bg-bottom lg:rounded-lg"
   <?php if ($backgroundFile !== null): ?>
     style="background-image: url('<?= $backgroundFile->url() ?>')"
   <?php endif; ?>
