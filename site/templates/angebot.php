@@ -22,8 +22,19 @@ use Kirby\Cms\Page;
 </div>
 
 <!-- Content -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-8">
-  <div class="lg:col-span-2">
+<div class="grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto_auto] gap-2 md:gap-8">
+
+  <!-- Cover -->
+  <div class="lg:col-start-3">
+    <?php if ($page->content()->cover()->toFile() != null): ?>
+      <img
+        src="<?= $page->content()->cover()->toFile()->url() ?>"
+        class="rounded-lg">
+    <?php endif ?>
+  </div>
+
+  <!-- Content -->
+  <div class="lg:row-start-1 lg:row-span-2 lg:col-span-2">
     <div class="prose max-w-none">
       <?= $page->content()->text()->kirbytext() ?>
     </div>
@@ -67,37 +78,35 @@ use Kirby\Cms\Page;
         <?php endif ?>
       </table>
     </div>
+  </div>
+
+  <!-- Widget -->
+  <div class="lg:row-start-3 lg:col-span-2">
     <?php
     $widget = $page->content()->widget()->toUrl();
     if ($widget != null): ?>
-      <div class="mt-12">
-        <div class="flex justify-between items-center mb-4">
-          <h2>Anmeldung</h2>
-          <a href="<?= $widget ?>" class="flex items-center gap-1" target="_blank">
-            In neuem Tab öffnen
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
-              <path
-                d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
-            </svg>
-          </a>
-        </div>
-        <iframe
-          src="<?= $widget ?>"
-          class="w-full h-144"
-        ></iframe>
+      <div class="flex justify-between items-center mb-4">
+        <h2>Anmeldung</h2>
+        <a href="<?= $widget ?>" class="flex items-center gap-1" target="_blank">
+          In neuem Tab öffnen
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+            <path
+              d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
+          </svg>
+        </a>
       </div>
+      <iframe
+        src="<?= $widget ?>"
+        class="w-full h-144"
+      ></iframe>
     <?php endif ?>
   </div>
-  <div class="order-first lg:order-none">
-    <?php if ($page->content()->cover()->toFile() != null): ?>
-      <img
-        src="<?= $page->content()->cover()->toFile()->url() ?>"
-        class="rounded-lg">
-    <?php endif ?>
-    <div class="mt-4 lg:mt-8 prose max-w-none">
-      <?= $page->content()->sidebar()->kirbytext() ?>
-    </div>
+
+  <!-- Sidebar -->
+  <div class="lg:row-span-2 prose max-w-none">
+    <?= $page->content()->sidebar()->kirbytext() ?>
   </div>
+</div>
 </div>
 
 <?php snippet('footer') ?>
