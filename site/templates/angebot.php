@@ -22,7 +22,7 @@ use Kirby\Cms\Page;
 </div>
 
 <!-- Content -->
-<div class="grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto_auto] gap-2 md:gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto_auto] gap-8">
 
   <!-- Cover -->
   <div class="lg:col-start-3">
