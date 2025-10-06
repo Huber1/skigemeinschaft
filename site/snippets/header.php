@@ -65,7 +65,7 @@ if ($sizeField->exists()) {
   </script>
 </head>
 <body class="flex-1 flex flex-col">
-<div id="header-div" class="px-8 md:fixed md:top-0 md:left-0 md:right-0 bg-primary-50 shadow-md">
+<div id="header-div" class="z-10000 px-8 md:fixed md:top-0 md:left-0 md:right-0 bg-primary-50 shadow-md">
   <header class="max-w-7xl m-auto py-2 md:py-0">
     <a
       id="header-image"
