@@ -6,6 +6,8 @@ status:
   listed:
     label: Öffentlich
 
+image: page.cover.toFile
+
 columns:
   - width: 2/3
     fields:
@@ -43,15 +45,15 @@ columns:
             type: date
             display: DD.MM.YYYY
             label: Anmeldeschluss
-#          alter:
-#            type: select
-#            label: Altersgruppe
-#            options:
-#              - Alle Altersgruppen
-#              - Kinder (6-12 Jahre)
-#              - Jugendliche (13-17 Jahre)
-#              - Junge Erwachsene (18-25 Jahre)
-#              - Erwachsene (ab 26 Jahren)
+          #          alter:
+          #            type: select
+          #            label: Altersgruppe
+          #            options:
+          #              - Alle Altersgruppen
+          #              - Kinder (6-12 Jahre)
+          #              - Jugendliche (13-17 Jahre)
+          #              - Junge Erwachsene (18-25 Jahre)
+          #              - Erwachsene (ab 26 Jahren)
           minAlter:
             type: number
             label: Mindestalter
