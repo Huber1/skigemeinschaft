@@ -25,18 +25,6 @@ $backgroundFile = $page->content()->background()->toFile();
     style="background-image: url('<?= $backgroundFile->url() ?>')"
   <?php endif; ?>
 >
-
-  <img
-    src="<?= asset('assets/images/logo.svg')->url() ?>"
-    alt=""
-    class="h-64">
-
-  <div class="flex gap-4">
-    <a href="<?= $page->content()->angebote_url()->toUrl() ?>"
-       class="block px-4 py-2 rounded-lg bg-salmon text-inherit">Angebote</a>
-    <a href="<?= $page->content()->mitglied_werden_url()->toUrl() ?>"
-       class="block px-4 py-2 rounded-lg bg-salmon text-inherit">Mitglied werden</a>
-  </div>
 </div>
 
 <div class="px-8 mt-16">

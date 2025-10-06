@@ -29,15 +29,6 @@ columns:
             multiple: false
             uploads:
               template: blocks/image
-      links:
-        type: fields
-        fields:
-          angebote_url:
-            label: Angebote Link
-            type: link
-          mitglied_werden_url:
-            label: Mitglied Werden Link
-            type: link
       files:
         label: Dateien
         type: files
