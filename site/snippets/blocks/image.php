@@ -15,10 +15,10 @@ if ($block->location() == 'web') {
   $src = $image->url();
 }
 
-$sizes = "(min-width: 1200px) 25vw,
-        (min-width: 900px) 33vw,
-        (min-width: 600px) 50vw,
-        100vw";
+$sizes = "(min-width: 1200px) 50vw,
+        (min-width: 900px) 66vw,
+        (min-width: 600px) 100vw,
+        200vw";
 
 ?>
 
