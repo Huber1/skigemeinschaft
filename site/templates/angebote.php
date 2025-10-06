@@ -39,8 +39,8 @@ if (empty($children)):
     <a href="<?= $child->url() ?>" class="block cursor-pointer group">
       <div class="h-full p-2 flex flex-col md:flex-row gap-4 items-stretch bg-salmon-50  rounded-2xl">
         <div
-          class="aspect-3/2 md:aspect-unset flex-2/5 bg-cover bg-center rounded-lg"
-          style="background-image: url('<?= $child->cover()->toFile()->url() ?>')">
+          class="aspect-3/2 md:aspect-unset flex-2/5 bg-cover bg-center rounded-lg">
+          <?php snippet('bgImage', ['image' => $child->cover()->toFile()]) ?>
         </div>
         <div class="flex-3/5 flex flex-col gap-2">
           <h2 class="text-xl font-medium text-salmon group-hover:text-salmon">

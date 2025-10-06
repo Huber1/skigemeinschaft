@@ -26,11 +26,10 @@ use Kirby\Cms\Page;
 
   <!-- Cover -->
   <div class="lg:col-start-3">
-    <?php if ($page->content()->cover()->toFile() != null): ?>
-      <img
-        src="<?= $page->content()->cover()->toFile()->url() ?>"
-        class="rounded-lg">
-    <?php endif ?>
+    <?php
+    if ($page->content()->cover()->toFile() != null)
+      snippet('image', ['image' => $page->content()->cover()->toFile()]);
+    ?>
   </div>
 
   <!-- Content -->

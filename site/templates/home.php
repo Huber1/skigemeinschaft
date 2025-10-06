@@ -20,7 +20,7 @@ $backgroundFile = $page->content()->background()->toFile();
 
 <!-- Hero section -->
 <div class="h-128">
-  <?php snippet('image', ['image' => $backgroundFile, 'position' => 'bottom']) ?>
+  <?php snippet('bgImage', ['image' => $backgroundFile, 'position' => 'bottom']) ?>
 </div>
 
 <div class="px-8 mt-16">
