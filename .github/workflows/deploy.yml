@@ -43,4 +43,10 @@ jobs:
             .editorconfig
             .gitignore
             package.json
+            package-lock.json
             README.md
+            DOCKER_ENV
+            docker_tag
+            Dockerfile-php-build
+            output.log
+
