@@ -3,6 +3,9 @@ name: Build and publish docker image
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+      - .github
+      - .forgejo
   workflow_dispatch:
 
 concurrency:
