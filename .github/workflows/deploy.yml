@@ -35,8 +35,8 @@ jobs:
             **/.git*
             **/.git*/**
             **/.forgejo
-            .docker
-            content
+            .docker/**
+            content/**
             node_modules/**
             site/accounts/**
             .dockerignore
