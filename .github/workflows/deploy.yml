@@ -1,0 +1,21 @@
+name: deploy
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install node dependencies
+        run: npm install
+      - name: Build node
+        run: npm run build
+      - name: Install php dependencies
+        uses: php-actions/composer@v6
+        with:
+          args: "--ignore-platform-reqs --optimize-autoloader --no-dev"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: .
