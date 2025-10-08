@@ -1,6 +1,11 @@
 name: deploy
 on:
   workflow_dispatch:
+    inputs:
+      dryRun:
+        type: boolean
+        default: false
+        description: Dry-Run server upload
 
 jobs:
   deploy:
@@ -16,6 +21,26 @@ jobs:
         with:
           args: "--ignore-platform-reqs --optimize-autoloader --no-dev"
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          path: .
+          server: '{{ secrets.FTP_DOMAIN }}'
+          username: '{{ secrets.FTP_USERNAME }}'
+          password: '{{ secrets.FTP_PASSWORD }}'
+          local-dir: "."
+          server-dir: "skigemeinschaftorg/"
+          dry-run: '{{ inputs.dryRun }}'
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.forgejo
+            .docker
+            content
+            node_modules/**
+            site/accounts/**
+            .dockerignore
+            .editorconfig
+            .gitignore
+            composer.*
+            package.json
+            README.md
