@@ -34,7 +34,7 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
-            **/.forgejo
+            **/.forgejo/
             .docker/**
             content/**
             node_modules/**
@@ -42,6 +42,5 @@ jobs:
             .dockerignore
             .editorconfig
             .gitignore
-            composer.*
             package.json
             README.md
