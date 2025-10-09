@@ -39,6 +39,7 @@ jobs:
             content/**
             node_modules/**
             site/accounts/**
+            site/config/.license
             .dockerignore
             .editorconfig
             .gitignore
