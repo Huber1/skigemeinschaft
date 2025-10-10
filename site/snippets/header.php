@@ -48,6 +48,7 @@ if ($sizeField->exists()) {
   <?= $slot ?>
 
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
+  <link rel="apple-touch-icon" href="<?= asset('assets/images/apple-touch-icon.png')->url() ?>">
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
