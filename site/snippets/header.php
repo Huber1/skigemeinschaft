@@ -20,6 +20,10 @@ if ($sizeField->exists()) {
 ?>
 <!DOCTYPE html>
 <html lang="de" class="bg-white min-h-screen flex flex-col">
+<!--
+  Website created by Moritz Huber
+  https://moritzhuber.de
+-->
 <head>
 
   <meta charset="utf-8">
