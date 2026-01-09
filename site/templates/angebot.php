@@ -43,6 +43,14 @@ use Kirby\Cms\Page;
           <td class="font-bold align-top pr-4">Termin</td>
           <td class="prose pb-4"><?= $page->termin() ?></td>
         </tr>
+        <?php
+        $alter = format_age($page->minAlter()->toInt(), $page->maxAlter()->toInt());
+        if ($alter != null): ?>
+          <tr>
+            <td class="font-bold align-top pr-4">Alter</td>
+            <td class="prose pb-4"><?= $alter ?></td>
+          </tr>
+        <?php endif ?>
         <?php foreach ($page->eigenschaften()->toStructure() as $item): ?>
           <tr>
             <td class="font-bold align-top pr-4"><?= $item->name() ?></td>
