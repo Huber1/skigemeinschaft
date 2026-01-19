@@ -110,7 +110,7 @@ use Kirby\Cms\Page;
   </div>
 
   <!-- Sidebar -->
-  <div class="lg:row-span-2 prose max-w-none">
+  <div class="row-start-2 lg:row-span-2 prose max-w-none border-b-2 border-b-slate-200 lg:border-none">
     <?= $page->content()->sidebar()->kirbytext() ?>
   </div>
 </div>
