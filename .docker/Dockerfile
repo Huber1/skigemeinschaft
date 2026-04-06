@@ -17,10 +17,10 @@ RUN npm install
 RUN npm run build
 
 
-FROM trafex/php-nginx:latest
+FROM trafex/php-nginx:3.11.1
 
 USER root
-RUN apk add php84-iconv php84-exif php84-zip php84-pecl-apcu php84-simplexml
+RUN apk add php85-iconv php85-exif php85-zip php85-pecl-apcu php85-simplexml
 USER nobody
 
 COPY .docker/nginx.conf /etc/nginx/conf.d/default.conf
