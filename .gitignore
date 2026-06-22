@@ -56,6 +56,6 @@ Icon
 node_modules
 vendor/
 package-lock.json
+.yarn/
 yarn.lock
 assets/css/styles.css
-
